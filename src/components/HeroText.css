@@ -1,0 +1,16 @@
+.text-center{
+    display: flex;
+    background-color: #212529;
+    height: 17rem;
+    color: white;
+    justify-content: center;
+    flex-direction: column;
+}
+.TitleText {
+    font-size: 3.5rem;
+    font-weight: 1000;
+}
+
+.SubText {
+    color: grey;
+}
