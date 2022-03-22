@@ -1,4 +1,8 @@
 .Main-container{
     display: flex;
     gap: 10px;
+    padding-top: 2.5rem;
+    padding-left: 15rem;
+    padding-right: 15rem;
+    flex-wrap: wrap;
 }

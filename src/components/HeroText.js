@@ -1,13 +1,4 @@
 import React from 'react';
-// import {
-//     MDBNavbar,
-//     MDBNavbarNav,
-//     MDBNavbarItem,
-//     MDBNavbarLink,
-//     MDBNavbarToggler,
-//     MDBContainer,
-//     MDBIcon
-//   } from 'mdb-react-ui-kit';
 import './HeroText.css';
 
 export default function HeroText() {

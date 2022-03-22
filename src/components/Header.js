@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   MDBContainer,
   MDBNavbar,
@@ -12,7 +12,6 @@ import {
 import './Header.css';
 
 export default function Header({cartItems}) {
-  const [showNav, setShowNav] = useState(false);
   const totalQty = cartItems.reduce((a,c) => a + c.qty, 0);
 
   return (

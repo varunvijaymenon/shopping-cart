@@ -11,19 +11,6 @@ export default function Cart(props) {
     const totalPrice = itemsPrice + taxPrice + shippingPrice;
 
     const price = (item) => item.newPrice ? item.newPrice : item.oldPrice;
-    console.log(cartItems)
-    const checkCartRemove = (item) =>{
-
-       const exist = cartItems.find(x=> x.id == item.id);
-
-       if (!exist) {
-           console.log('enable button now')
-       }
-       else{
-           console.log('item in cart')
-       }
-
-    }
     
   return (
       <div>
@@ -35,8 +22,7 @@ export default function Cart(props) {
     {cartItems.map((item) => (<div key={item.id} className='row'>
         <div className="col-2">{item.name}</div>
         <div className="col-2">
-        {/* <MDBBtn className='btn add-to-cart' onClick={() => onAdd(item)} href='#'>+</MDBBtn> */}
-        <MDBBtn className='btn remove-from-cart' disabled={false} onClick={() => {onRemove(item); checkCartRemove(item)}} href='#'>-</MDBBtn>
+        <MDBBtn className='btn remove-from-cart' disabled={false} onClick={(e) => {onRemove(item); e.preventDefault();}} href='#'>-</MDBBtn>
         </div>
         <div className="col-2">{item.qty} x ${price(item)}</div>
         <div className="col-1 text-right">{item.qty * price(item)}</div>

@@ -23,7 +23,6 @@ function App() {
   const onRemove = (product) => {
     const exist = cartItems.find(x=> x.id === product.id);
 
-    // console.log(cartItems)
     if(exist.qty === 1) {
       setCartItems(cartItems.filter(x=> x.id !== product.id))
     }
@@ -40,7 +39,7 @@ function App() {
       <Header cartItems={cartItems}></Header>
       <HeroText/>
       <Main products={products} onAdd={onAdd} cartItems = {cartItems} setCartItems={setCartItems}></Main>
-      <Cart cartItems = {cartItems} onAdd={onAdd} onRemove={onRemove}></Cart>
+      <Cart cartItems = {cartItems} onRemove={onRemove}></Cart>
     </div>
   );
 }

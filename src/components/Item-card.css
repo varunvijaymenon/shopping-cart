@@ -10,3 +10,8 @@
     top: 10px;
     color: white;
 }
+
+.card-container{
+    display: flex;
+    justify-content:center;
+}

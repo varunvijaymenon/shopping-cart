@@ -1,5 +1,5 @@
 import React from 'react';
-import Item_card from './Item-card';
+import ItemCard from './Item-card';
 import './Main.css'
 
 export default function Main(props) {
@@ -9,11 +9,7 @@ export default function Main(props) {
       <div className="Main-container">
       {products.map((product) => ((
       
-      <Item_card key={product.id} product={product} onAdd={onAdd} cartItems={cartItems} setCartItems={setCartItems}></Item_card>
-      // {/* <Item_card product={'Sale Item'} onAdd={onAdd} cartItems={cartItems} setCartItems={setCartItems}></Item_card> */}
-      // {/* <Item_card product={'Sale Item'} onAdd={onAdd} cartItems={cartItems} setCartItems={setCartItems}></Item_card> */}
-      
-
+      <ItemCard key={product.id} product={product} onAdd={onAdd} cartItems={cartItems} setCartItems={setCartItems}></ItemCard>
        )))} 
       
       </div>
